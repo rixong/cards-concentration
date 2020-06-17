@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <!-- <script src="../libraries/jquery.mobile-1.4.5.js"></script> -->
+  <script src="concentration_autoflip.js"></script>
+
+  <title>concentration_flex</title>
+  <style media="screen">
+
+    body {
+      background-color: #4f5673;
+    }
+
+    .board {
+      background-color: rgb(28, 55, 19);
+      -webkit-box-shadow: 14px 10px 38px -3px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 14px 10px 38px -3px rgba(0, 0, 0, 0.75);
+      box-shadow: 14px 10px 38px -3px rgba(0, 0, 0, 0.75);
+      margin: auto;
+      padding: 10px;
+      top: 10px;
+      border-radius: 15px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cardBox {
+      position: relative;
+      /* border: solid; */
+      box-sizing: content-box;
+      width: 100px;
+      height: 150px;
+      margin: 10px;
+    }
+
+    .back,
+    .card {
+      position: absolute;
+      /* -webkit-box-shadow: 14px 10px 38px -3px rgba(0,0,0,0.75); */
+      /* -moz-box-shadow: 14px 10px 38px -3px rgba(0,0,0,0.75); */
+      box-shadow: 14px 10px 18px -3px rgba(0, 0, 0, .8);
+    }
+
+    .back {
+      left: 0px;
+    }
+
+    .card {
+      height: 150px;
+      width: 0px;
+      left: 50px;
+    }
+
+    img {
+      border-radius: 10px;
+    }
+
+    .replay,
+    .stats {
+      position: fixed;
+      margin: auto;
+      width: 240px;
+      background-color: tan;
+      border: solid;
+      border-color: rgb(189, 107, 25);
+      border-radius: 15px;
+      color: black;
+      font-family: sans-serif;
+      font-weight: bold;
+      text-align: center;
+      display: none;
+    }
+
+    .stats {
+      top: 80px;
+      height: 50px;
+      font-size: 24px;
+      padding: 10px;
+    }
+
+    .replay {
+      top: 220px;
+      padding: 10px;
+      font-size: 36px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="board"></div>
+  <div class="stats"></div>
+  <div class="replay">Try again?</div>
+</body>
+
+</html>
